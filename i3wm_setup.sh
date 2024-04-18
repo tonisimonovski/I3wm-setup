@@ -98,7 +98,7 @@ sudo apt install i3lock -y
 sudo apt install xclip -y
 
 # qt5-style-plugins --Qt 5 extra widget styles, qt5-style-plugins
-sudo apt install qt5-style-plugins -y
+# sudo apt install qt5-style-plugins -y
 
 # materia-gtk-theme --Materia. Materia is a Material Design theme for GNOME/GTK based desktop environments.
 sudo apt install materia-gtk-theme -y
@@ -106,69 +106,65 @@ sudo apt install materia-gtk-theme -y
 # lxappearance --It's a desktop-independent theme switcher for GTK+
 sudo apt install lxappearance -y
 
-# xbacklight --Xbacklight is used to adjust the backlight brightness where supported.  
-sudo apt install xbacklight -y
-
 # flameshot --Flameshot is a free and open-source, cross-platform tool to take screenshots
 sudo apt install flameshot -y
 
-# nautilus --Nautilus, is the default file manager of the GNOME desktop
-sudo apt install nautilus -y
-
-# xfce4-power-manager --Xfce4 Power Manager manages the power sources of the computer and connected devices (wireless mice, keyboards, media players etc.).
-sudo apt install xfce4-power-manager -y
-
 # pnmixer --PNMixer is a simple mixer application designed to run in your system tray.
 sudo apt install pnmixer -y
-
-# network-manager-gnome --NetworkManager is the standard Linux network configuration tool suite. 
-sudo apt install network-manager-gnome -y
-
-# policykit-1-gnome --Bus service that is used to bring up authentication dialogs used for obtaining privileges. 
-sudo apt install policykit-1-gnome -y         
-
+   
 # Install Papirus icon theme
 wget -qO- https://git.io/papirus-icon-theme-install | sh
 
 # Installing Essential Programs 
 
-# feh 
-sudo install feh -y
-# kitty 
-sudo install kitty -y
-
 # picom 
 sudo install picom -y
+
 # thunar 
 sudo install thunar -y
+
 # nitrogen 
 sudo install nitrogen -y
+
 # lxpolkit 
 sudo install lxpolkit -y
+
 # x11-xserver-utils 
 sudo install x11-xserver-utils -y
+
 # unzip 
-sudo install unzip -y                
+sudo install unzip -y 
+
 # wget 
 sudo install wget -y
+
 # pipewire 
 sudo install pipewire -y
+
 # wireplumber 
 sudo install wireplumber -y
+
 # pavucontrol 
 sudo install pavucontrol -y
+
 # build-essential 
 sudo install build-essential -y
+
 # libx11-dev 
 sudo install libx11-dev -y
+
 # libxft-dev 
 sudo install libxft-dev -y
+
 # libxinerama-dev 
 sudo install libxinerama-dev -y
+
 # libx11-xcb-dev 
 sudo install libx11-xcb-dev -y
+
 # libxcb-res0-dev 
 sudo install libxcb-res0-dev -y
+
 # zoxide
 sudo install zoxide -y
 

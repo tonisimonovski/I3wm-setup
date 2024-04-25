@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# All in one install script i3WM on Debian minimal
+# All in one install script of i3 windows manager on Debian Bookworm minimal
 # install i3wm with --aditional pack
 # addet for ricing the theme
 

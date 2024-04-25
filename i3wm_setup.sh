@@ -34,200 +34,174 @@ apt upgrade -y
 # Install nala
 apt install nala -y
 
-# Install Rhthmbox: 
-# sudo apt install rhythmbox
-
 # xorg display server installation
-sudo apt install -y xorg xserver-xorg xbacklight xbindkeys xinput
+apt install -y xorg xserver-xorg xbacklight xbindkeys xinput
 
 # build-essential If you do not plan to build Debian packages, you don't need this package. 
 # Starting with dpkg (>= 1.14.18) this package is required for building Debian packages. 
-sudo apt install -y build-essential
+apt install -y build-essential
 
 # xdg-user-dirs-update updates the current state of the users user-dirs.dir.
 # xdg-user-dirs is a tool to help manage "well known" user directories like the desktop folder and the music folder.
 xdg-user-dirs-update
 mkdir ~/Oldconfig
 
-# Tools/System
+# ====== Tools/System ==============================================================
 # dialog -  Displays user-friendly dialog boxes from shell scripts 
+apt install -y dialog 
 # mtolls - Tools for manipulating MSDOS files 
+apt install -y mtools 
 # dosfstools - utilities for making and checking MS-DOS FAT filesystems 
+apt install -y dosfstools 
 # acpi - displays information on ACPI devices 
+apt install -y acpi 
 # acpid - Advanced Configuration and Power Interface event daemon 
+apt install -y acpid
+systemctl enable acpid
 # gvfs-backedns -	userspace virtual filesystem
+apt install -y gvfs-backends 
 # xfce4-power-manager - power manager for Xfce desktop
-
-# avahi-daemon - Avahi is a system which facilitates service discovery 
-# on a local network via the mDNS/DNS-SD protocol suite.
-
+apt install -y xfce4-power-manager 
 # lxappearance - 	LXDE GTK+ theme switcher
+apt install -y lxappearance 
 # neofetch - Shows Linux System Information with Distribution Logo 
+apt install -y neofetch
 # btop - Modern and colorful command line resource monitor that shows usage and stats 
+apt install -y btop
+# avahi-daemon - The Avahi mDNS/DNS-SD daemon 
+apt install -y avahi-daemon 
+systemctl enable avahi-daemon
 
-
-sudo apt install -y dialog mtools dosfstools acpi acpid gvfs-backends xfce4-power-manager 
-
-# sudo apt install -y avahi-daemon 
-
-sudo apt install lxappearance neofetch btop
-
-#sudo systemctl enable avahi-daemon
-#sudo systemctl enable acpid
-
-# Network 
+# ======= Networking ===================================================================
 # network-manager - network management framework (daemon and userspace tools) 
+apt install -y network-manager
 # network-manager-gnome - network management framework (GNOME frontend) 
-sudo apt install -y network-manager network-manager-gnome
+apt install -y network-manager-gnome
 
-
+# ========= Accessories ===================================================================
 # Thunar and accessories
-sudo apt install -y thunar thunar-archive-plugin thunar-volman file-roller
-
+apt install -y thunar thunar-archive-plugin thunar-volman file-roller
 # Terminal (eg. terminator,kitty,xfce4-terminal)
-# sudo apt install -y kitty tilix 
-
+# apt install -y kitty tilix 
 # Sound packages
-sudo apt install -y pulseaudio alsa-utils pavucontrol volumeicon-alsa pamixer
-
+apt install -y pulseaudio alsa-utils pavucontrol volumeicon-alsa pamixer
 # Browser Installation (eg. chromium, brave, firefox-esr, librewolf)
-sudo apt install -y firefox-esr
-
+apt install -y firefox-esr
 # Desktop background browser/handler (feh --bg-fill /path/to/directory )
+apt install -y feh
 
-# sudo apt install -y nitrogen 
-sudo apt install -y feh
-
-### Installing fonts
-# Fonts and icons for now
-sudo apt install -y fonts-roboto 
-sudo apt install -y fonts-recommended 
-sudo apt install -y fonts-noto-color-emoji 
-sudo apt install -y fonts-ubuntu 
-sudo apt install -y fonts-font-awesome 
-sudo apt install -y fonts-terminus 
+### Installing fonts ###########
+# Fonts and icons 
+apt install -y fonts-roboto 
+apt install -y fonts-recommended 
+apt install -y fonts-noto-color-emoji 
+apt install -y fonts-ubuntu 
+apt install -y fonts-font-awesome 
+apt install -y fonts-terminus 
 
 # Papirus theme
-sudo apt install -y papirus-icon-theme
+apt install -y papirus-icon-theme
 # Install Papirus icon theme
 wget -qO- https://git.io/papirus-icon-theme-install | sh
 
 # EXA installation
 # replace ls command in .bashrc file with line below
 # alias ls=exa -al --long --header --color=always --group-directories-first 
-sudo apt install -y exa
+apt install -y exa
 
 
-# Printing and bluetooth (if needed)
-# sudo apt install -y cups system-config-printer simple-scan
-# sudo apt install -y bluez blueman
-
-# sudo systemctl enable cups
-# sudo systemctl enable bluetooth
+# bluetooth
+apt install -y bluez blueman
+systemctl enable bluetooth
 
 # Packages needed for window manager installation
-sudo apt install -y picom rofi dunst libnotify-bin unzip wmctrl xdotool libnotify-dev 
-
+apt install -y picom        
+apt install -y rofi
+apt install -y dunst
+apt install -y libnotify-bin
+apt install -y unzip
+apt install -y wmctrl
+apt install -y xdotool
+apt install -y libnotify-dev
 # compton --Compton Compositor - Add Transparency To Your Programs
-sudo apt install compton -y
-
-# i3lock --i3lock is a simple screen locker like slock. After starting it, you will see a white screen (you can configure the color/an image).
-sudo apt install i3lock -y
-
+apt install -y compton
+# i3lock --i3lock is a simple screen locker like slock. 
+apt install -y i3lock
 # xclip --Copy and paste at the Linux command line with xclip
-sudo apt install xclip -y
-
+apt install -y xclip
 # qt5-style-plugins --Qt 5 extra widget styles, qt5-style-plugins
-# sudo apt install qt5-style-plugins -y
-
+apt install -y qt5-style-plugins
 # materia-gtk-theme --Materia. Materia is a Material Design theme for GNOME/GTK based desktop environments.
-sudo apt install materia-gtk-theme -y
-
+apt install -y materia-gtk-theme
 # flameshot --Flameshot is a free and open-source, cross-platform tool to take screenshots
-sudo apt install flameshot -y
-
+apt install -y flameshot
 # pnmixer --PNMixer is a simple mixer application designed to run in your system tray.
-sudo apt install pnmixer -y
+apt install -y pnmixer
    
 ### Installing Essential Programs 
-
 # lxpolkit 
-sudo install lxpolkit -y
-
+apt install -y lxpolkit
 # x11-xserver-utils 
-sudo install x11-xserver-utils -y
-
+apt install -y x11-xserver-utils
 # wget 
-sudo install wget -y
-
+apt install -y wget
 # pipewire 
-sudo install pipewire -y
-
+apt install -y pipewire
 # wireplumber 
-sudo install wireplumber -y
-
+apt install -y wireplumber
 # libx11-dev 
-sudo install libx11-dev -y
-
+apt install -y libx11-dev
 # libxft-dev 
-sudo install libxft-dev -y
-
+apt install -y libxft-dev
 # libxinerama-dev 
-sudo install libxinerama-dev -y
-
+apt install -y libxinerama-dev
 # libx11-xcb-dev 
-sudo install libx11-xcb-dev -y
-
+apt install -y libx11-xcb-dev
 # libxcb-res0-dev 
-sudo install libxcb-res0-dev -y
-
+apt install -y libxcb-res0-dev
 # zoxide
-sudo install zoxide -y
-
+apt install -y zoxide
 # Installing Other less important Programs
-
-nala install -y psmisc 
-nala install -y mangohud 
-nala install -y lightdm -y
+apt install -y psmisc 
+apt install -y mangohud 
+apt install -y lightdm
 
 # Enable graphical login and change target from CLI to GUI
 systemctl enable lightdm
 systemctl set-default graphical.target
-sudo systemctl enable lightdm
-
+systemctl enable lightdm
 
 # Enable wireplumber audio service
 sudo -u $username systemctl --user enable wireplumber.service
 
 # Multimedia/GFX
-sudo apt install -y mpv 
-sudo apt install -y qimgv 
-sudo apt install -y scrot 
-sudo apt install -y gimp 
-sudo apt install -y obs-studio 
-sudo apt install -y mkvtoolnix-gui 
-sudo apt install -y redshift 
-sudo apt install -y eog 
-sudo apt install -y brightnessctl
+apt install -y mpv 
+apt install -y qimgv 
+apt install -y scrot 
+apt install -y gimp 
+apt install -y obs-studio 
+apt install -y mkvtoolnix-gui 
+apt install -y redshift 
+apt install -y eog 
+apt install -y brightnessctl
 
 # PDF 
-sudo apt install -y  evince pdfarranger
+apt install -y  evince pdfarranger
 
 # Others
-sudo apt install -y numlockx 
-sudo apt install -y figlet 
-sudo apt install -y galculator
-sudo apt install -y cpu-x
-sudo apt install -y udns-utils
-sudo apt install -y whois 
-sudo apt install -y curl 
-sudo apt install -y tree
+apt install -y numlockx 
+apt install -y figlet 
+apt install -y galculator
+apt install -y cpu-x
+apt install -y udns-utils
+apt install -y whois 
+apt install -y curl 
+apt install -y tree
 
 ########################################################
 # End of script #
 
 
-sudo apt autoremove
+apt autoremove
 
-printf "\e[1;32mFinished! Thanks you.\e[0m\n"
-
+printf "\e[1;32mFinished! Thank you.\e[0m\n"

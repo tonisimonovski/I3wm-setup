@@ -2,17 +2,11 @@
 
 # All in one install script of i3 windows manager on Debian Bookworm minimal
 # install i3wm with --aditional pack
-# addet for ricing the theme
 
 # Link to i3wm documentation: 
 # https://i3wm.org/
 
-# Download Media and volume keys snippet:
-# https://faq.i3wm.org/question/3747/enabling-multimedia-keys/?answer=3759#post-id-3759
-
-# Download Playerctl:
-# https://github.com/acrisci/playerctl/...
-
+============================================================================================================
 
 # Check if Script is Run as Root
 if [[ $EUID -ne 0 ]]; then
@@ -24,6 +18,7 @@ username=$(id -u -n 1000)
 builddir=$(pwd)
 
 # Install packages after installing base Debian with no GUI
+============================================================================================================
 
 # Update packages list 
 apt update -y 
@@ -37,16 +32,17 @@ apt install nala -y
 # xorg display server installation
 apt install -y xorg xserver-xorg xbacklight xbindkeys xinput
 
+# Install i3 windows manager
+apt install i3
+
+# i3lock --i3lock is a simple screen locker like slock. 
+apt install -y i3lock
+
 # build-essential If you do not plan to build Debian packages, you don't need this package. 
-# Starting with dpkg (>= 1.14.18) this package is required for building Debian packages. 
-apt install -y build-essential
+# apt install -y build-essential
 
-# xdg-user-dirs-update updates the current state of the users user-dirs.dir.
-# xdg-user-dirs is a tool to help manage "well known" user directories like the desktop folder and the music folder.
-xdg-user-dirs-update
-mkdir ~/Oldconfig
-
-# ====== Tools/System ==============================================================
+# Tools/System
+============================================================================================================
 # dialog -  Displays user-friendly dialog boxes from shell scripts 
 apt install -y dialog 
 # mtolls - Tools for manipulating MSDOS files 
@@ -72,13 +68,15 @@ apt install -y btop
 apt install -y avahi-daemon 
 systemctl enable avahi-daemon
 
-# ======= Networking ===================================================================
+# Networking
+============================================================================================================
 # network-manager - network management framework (daemon and userspace tools) 
 apt install -y network-manager
 # network-manager-gnome - network management framework (GNOME frontend) 
 apt install -y network-manager-gnome
 
-# ========= Accessories ===================================================================
+# Accessories
+============================================================================================================
 # Thunar and accessories
 apt install -y thunar thunar-archive-plugin thunar-volman file-roller
 # Terminal (eg. terminator,kitty,xfce4-terminal)
@@ -125,8 +123,6 @@ apt install -y xdotool
 apt install -y libnotify-dev
 # compton --Compton Compositor - Add Transparency To Your Programs
 apt install -y compton
-# i3lock --i3lock is a simple screen locker like slock. 
-apt install -y i3lock
 # xclip --Copy and paste at the Linux command line with xclip
 apt install -y xclip
 # qt5-style-plugins --Qt 5 extra widget styles, qt5-style-plugins
@@ -139,6 +135,7 @@ apt install -y flameshot
 apt install -y pnmixer
    
 ### Installing Essential Programs 
+============================================================================================================
 # lxpolkit 
 apt install -y lxpolkit
 # x11-xserver-utils 
@@ -162,11 +159,13 @@ apt install -y libxcb-res0-dev
 # zoxide
 apt install -y zoxide
 # Installing Other less important Programs
+============================================================================================================
 apt install -y psmisc 
 apt install -y mangohud 
 apt install -y lightdm
 
 # Enable graphical login and change target from CLI to GUI
+============================================================================================================
 systemctl enable lightdm
 systemctl set-default graphical.target
 systemctl enable lightdm
@@ -175,6 +174,7 @@ systemctl enable lightdm
 sudo -u $username systemctl --user enable wireplumber.service
 
 # Multimedia/GFX
+============================================================================================================
 apt install -y mpv 
 apt install -y qimgv 
 apt install -y scrot 
@@ -198,7 +198,7 @@ apt install -y whois
 apt install -y curl 
 apt install -y tree
 
-########################################################
+============================================================================================================
 # End of script #
 
 

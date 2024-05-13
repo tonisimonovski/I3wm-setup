@@ -7,7 +7,7 @@ Script for auto install on I3wm in Debian Bookworm
   
      cd ~/Downloads/i3wm
   
-     chmod +x i3wm_setup.sh
+     sudo chmod +x i3wm_setup.sh
   
      sudo ./i3wm_setup.sh
 

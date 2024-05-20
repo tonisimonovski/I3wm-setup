@@ -45,23 +45,17 @@ apt install -y i3lock
 ============================================================================================================
 # dialog -  Displays user-friendly dialog boxes from shell scripts 
 apt install -y dialog 
-# mtolls - Tools for manipulating MSDOS files 
-apt install -y mtools 
-# dosfstools - utilities for making and checking MS-DOS FAT filesystems 
-apt install -y dosfstools 
 # acpi - displays information on ACPI devices 
 apt install -y acpi 
 # acpid - Advanced Configuration and Power Interface event daemon 
 apt install -y acpid
 systemctl enable acpid
-# gvfs-backedns -	userspace virtual filesystem
-apt install -y gvfs-backends 
 # xfce4-power-manager - power manager for Xfce desktop
-apt install -y xfce4-power-manager 
+# apt install -y xfce4-power-manager 
 # lxappearance - 	LXDE GTK+ theme switcher
 apt install -y lxappearance 
-# neofetch - Shows Linux System Information with Distribution Logo 
-apt install -y neofetch
+# fastfetch - Shows Linux System Information with Distribution Logo 
+apt install -y fastfetch
 # btop - Modern and colorful command line resource monitor that shows usage and stats 
 apt install -y btop
 # avahi-daemon - The Avahi mDNS/DNS-SD daemon 
@@ -80,7 +74,7 @@ apt install -y network-manager-gnome
 # Thunar and accessories
 apt install -y thunar thunar-archive-plugin thunar-volman file-roller
 # Terminal (eg. terminator,kitty,xfce4-terminal)
-# apt install -y kitty tilix 
+# apt install -y zutty 
 # Sound packages
 apt install -y pulseaudio alsa-utils pavucontrol volumeicon-alsa pamixer
 # Browser Installation (eg. chromium, brave, firefox-esr, librewolf)
@@ -96,11 +90,6 @@ apt install -y fonts-noto-color-emoji
 apt install -y fonts-ubuntu 
 apt install -y fonts-font-awesome 
 apt install -y fonts-terminus 
-
-# Papirus theme
-apt install -y papirus-icon-theme
-# Install Papirus icon theme
-wget -qO- https://git.io/papirus-icon-theme-install | sh
 
 # EXA installation
 # replace ls command in .bashrc file with line below

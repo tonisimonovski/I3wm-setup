@@ -77,12 +77,30 @@ apt install -y thunar thunar-archive-plugin thunar-volman file-roller
 # apt install -y zutty 
 # Sound packages
 apt install -y pulseaudio alsa-utils pavucontrol volumeicon-alsa pamixer
+
+
 # Browser Installation (eg. chromium, brave, firefox-esr, librewolf)
-apt install -y firefox-esr
+============================================================================================================
+
+git clone https://github.com/tonisimonovski/Install-Librewolf-in-Bookworm ~/Downloads/Librewolf
+
+cd ~/Downloads/Librewolf
+
+sudo chmod +x install_librewolf_in_Bookworm.sh
+
+sudo ./install_librewolf_in_Bookworm.sh
+
+sudo rm -r ~/Downloads/Librewolf
+
+cd ~/
+
+
 # Desktop background browser/handler (feh --bg-fill /path/to/directory )
 apt install -y feh
 
-### Installing fonts ###########
+### Installing fonts ###
+============================================================================================================
+
 # Fonts and icons 
 apt install -y fonts-roboto 
 apt install -y fonts-recommended 
@@ -101,7 +119,9 @@ apt install -y exa
 apt install -y bluez blueman
 systemctl enable bluetooth
 
-# Packages needed for window manager installation
+### Packages needed for window manager installation ###
+============================================================================================================
+
 apt install -y picom        
 apt install -y rofi
 apt install -y dunst

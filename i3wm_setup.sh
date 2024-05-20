@@ -184,18 +184,12 @@ sudo -u $username systemctl --user enable wireplumber.service
 
 # Multimedia/GFX
 ============================================================================================================
-apt install -y mpv 
+apt install -y vlc 
 apt install -y qimgv 
-apt install -y scrot 
-apt install -y gimp 
-apt install -y obs-studio 
-apt install -y mkvtoolnix-gui 
+# apt install -y scrot 
+# apt install -y mkvtoolnix-gui 
 apt install -y redshift 
-apt install -y eog 
 apt install -y brightnessctl
-
-# PDF 
-apt install -y  evince pdfarranger
 
 # Others
 apt install -y numlockx 

@@ -1,4 +1,4 @@
-sudo # Install-I3wm-in-Bookworm
+
 Script for auto install on I3wm in Debian Bookworm
 
 # Installing in terminal commands:
